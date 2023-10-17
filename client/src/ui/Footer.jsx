@@ -1,5 +1,5 @@
 function Footer() {
-  return <footer>&copy; Wellness Warriors. Established 2023</footer>;
+  return <footer>&copy; 2023 Wellness Warriors </footer>;
 }
 
 export default Footer;

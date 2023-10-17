@@ -1,5 +1,11 @@
+import HighlightList from "./HighlightList";
+
 function Dashboard() {
-  return <div>Dashboard</div>;
+  return (
+    <div>
+      <HighlightList />
+    </div>
+  );
 }
 
 export default Dashboard;

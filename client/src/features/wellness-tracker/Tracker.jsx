@@ -1,5 +1,10 @@
+import ActionItem from "./ActionItem";
 function Tracker() {
-  return <div></div>;
+  return (
+    <div>
+      <ActionItem />
+    </div>
+  );
 }
 
 export default Tracker;
