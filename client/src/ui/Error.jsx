@@ -1,5 +1,6 @@
+import Button from "./Button";
 function Error() {
-  return <div>Error</div>;
+  return <Button type="back">&larr; Back</Button>;
 }
 
 export default Error;
