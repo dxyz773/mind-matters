@@ -1,10 +1,10 @@
-import '@passageidentity/passage-elements/passage-auth';
+import '@passageidentity/passage-elements/passage-login';
 
 function Login() {
   return (
-    <div>
-     <passage-auth app-id="yKCRLJ0k5VFjLECim3ynXoSW"></passage-auth>
-     </div>
+      <div>
+        <passage-login app-id="yKCRLJ0k5VFjLECim3ynXoSW"></passage-login>
+      </div>
   );
 }
 export default Login;
