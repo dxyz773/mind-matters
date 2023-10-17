@@ -1,5 +1,5 @@
 function OurMission() {
-  return <div>Our Mission</div>;
+  return <h2>Our Mission</h2>;
 }
 
 export default OurMission;
