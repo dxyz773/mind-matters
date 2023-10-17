@@ -7,7 +7,8 @@ import Home from "./ui/Home";
 import OurMission from "./ui/OurMission";
 import Auth from "./features/authentication/Auth";
 import UserAccount from "./features/user/UserAccount";
-import WellnessResources from "./features/wellness-resources/WellnessResources";
+import WellnessResourcePage from "./features/wellness-resources/WellnessResourcePage";
+// import WellnesssTopic from "./features/wellness-resources/WellnesssTopic";
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
       { path: "/signup", element: <Auth /> },
       {
         path: "/wellness-resources",
-        element: <WellnessResources />,
+        element: <WellnessResourcePage />,
         errorElement: <Error />,
       },
     ],
