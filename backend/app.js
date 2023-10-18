@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 
 const { NotFoundError } = require("./expressErrors");
+const categoriesRoutes = require("./routes/categories");
 
 const app = express();
 
@@ -9,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-
+app.use("/categories", categoriesRoutes);
 
 /** Handle 404 errors */
 app.use(function (req, res, next) {
