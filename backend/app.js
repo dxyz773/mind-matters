@@ -1,13 +1,19 @@
 const express = require("express");
 const cors = require("cors");
-
+const Passage = require("@passageidentity/passage-node");
 const { NotFoundError } = require("./expressErrors");
 const categoriesRoutes = require("./routes/categories");
 const tasksRoutes = require("./routes/tasks");
 
 const app = express();
+require("dotenv").config();
+const CLIENT_URL = "http://127.0.0.1:5173/";
 
-app.use(cors());
+app.use(cors({
+  origin: ['http://127.0.0.1:5173', 'http://localhost:3001'],
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+}));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 

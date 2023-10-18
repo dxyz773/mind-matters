@@ -7,9 +7,13 @@ import Home from "./ui/Home";
 import OurMission from "./ui/OurMission";
 import Auth from "./features/authentication/Auth";
 import UserAccount from "./features/user/UserAccount";
+import Signup from "./ui/Signup";
+import Login from "./ui/Login";
+import AfterAuth from "./features/user/AfterAuth"
 import WellnessResourcePage from "./features/wellness-resources/WellnessResourcePage";
 import WellnesssTopic from "./features/wellness-resources/WellnesssTopic";
 // import WellnesssTopic from "./features/wellness-resources/WellnesssTopic";
+
 
 const router = createBrowserRouter([
   {
@@ -23,8 +27,9 @@ const router = createBrowserRouter([
         element: <UserAccount />,
         errorElement: <Error />,
       },
-      { path: "/login", element: <Auth /> },
-      { path: "/signup", element: <Auth /> },
+      { path: "/login", element: <Login /> },
+      { path: "/signup", element: <Signup /> },
+      { path: "/afterauth", element: <AfterAuth /> },
       {
         path: "/wellness-resources",
         element: <WellnessResourcePage />,
