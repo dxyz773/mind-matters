@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { wellnessData } from "../../data/wellnessResourceData";
 
 function WellnesssTopic() {
-  const [currentTopic, setCurrentTopic] = useState(wellnessData[0]);
+  const [currentTopic, setCurrentTopic] = useState(wellnessData[3]);
 
   const { topic } = useParams();
   console.log(currentTopic);
@@ -17,6 +17,12 @@ function WellnesssTopic() {
             <p key={fact.data}>{fact.data}</p>
           ))}
         </div>
+      ))}
+      <h4>Further Reading</h4>
+      {currentTopic.links.map((link) => (
+        <li key={link.title}>
+          <a href={link.link}>{link.title}</a>
+        </li>
       ))}
     </div>
   );
