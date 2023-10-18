@@ -1,12 +1,12 @@
 import WellnessNavbar from "./WellnessNavbar";
-import WellnesssTopic from "./WellnesssTopic";
+import { Outlet } from "react-router-dom";
 
 function WellnessResourcePage() {
   return (
     <div>
       <h2>Wellness Resources</h2>
       <WellnessNavbar />
-      <WellnesssTopic />
+      <Outlet />
     </div>
   );
 }

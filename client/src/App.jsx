@@ -8,6 +8,7 @@ import OurMission from "./ui/OurMission";
 import Auth from "./features/authentication/Auth";
 import UserAccount from "./features/user/UserAccount";
 import WellnessResourcePage from "./features/wellness-resources/WellnessResourcePage";
+import WellnesssTopic from "./features/wellness-resources/WellnesssTopic";
 // import WellnesssTopic from "./features/wellness-resources/WellnesssTopic";
 
 const router = createBrowserRouter([
@@ -28,6 +29,9 @@ const router = createBrowserRouter([
         path: "/wellness-resources",
         element: <WellnessResourcePage />,
         errorElement: <Error />,
+        children: [
+          { path: "/wellness-resources/:topic", element: <WellnesssTopic /> },
+        ],
       },
     ],
   },
