@@ -6,7 +6,7 @@
 
 1. Open new terminal in IDE/code editor
 2. cd into client folder
-
+2a. This is a test by Ray
 3. Install dependencies
 
 ```
