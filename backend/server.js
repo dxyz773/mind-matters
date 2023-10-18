@@ -36,7 +36,6 @@ const passage = new Passage({
 });
 
 app.post("/auth", async (req, res) => {
-  console.log("hit this");
   try {
     const userID = await passage.authenticateRequest(req);
     if (userID) {
