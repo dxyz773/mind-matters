@@ -1,11 +1,11 @@
 import WellnessLink from "./WellnessLink";
 function WellnessNavbar() {
   const wellnessTopics = [
-    "meditation",
-    "time-in-nature-green-blue-spaces",
-    "movement",
-    "social-connection",
-    "self-expression",
+    "Meditation",
+    "Time In Nature",
+    "Movement",
+    "Social Connection",
+    "Self-expression",
   ];
   return (
     <div>
