@@ -1,4 +1,4 @@
-export const wellnessDate = [
+export const wellnessData = [
   {
     topic: "meditation",
     resources: [
