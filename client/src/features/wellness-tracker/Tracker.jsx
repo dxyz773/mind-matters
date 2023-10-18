@@ -1,8 +1,9 @@
-
+import Task from "./Task";
 function Tracker() {
   return (
     <div>
-      <ActionItem />
+      <h4>Tracker</h4>
+      <Task />
     </div>
   );
 }

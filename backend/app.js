@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const Passage = require("@passageidentity/passage-node");
 const { NotFoundError } = require("./expressErrors");
+const categoriesRoutes = require("./routes/categories");
+const tasksRoutes = require("./routes/tasks");
 
 const app = express();
 require("dotenv").config();
@@ -15,7 +17,8 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-
+app.use("/categories", categoriesRoutes);
+app.use("/tasks", tasksRoutes);
 
 /** Handle 404 errors */
 app.use(function (req, res, next) {
