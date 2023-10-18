@@ -8,6 +8,9 @@ import OurMission from "./ui/OurMission";
 import Auth from "./features/authentication/Auth";
 import UserAccount from "./features/user/UserAccount";
 import WellnessResources from "./features/wellness-resources/WellnessResources";
+import Signup from "./ui/Signup";
+import Login from "./ui/Login";
+import AfterAuth from "./features/user/AfterAuth"
 
 const router = createBrowserRouter([
   {
@@ -21,8 +24,9 @@ const router = createBrowserRouter([
         element: <UserAccount />,
         errorElement: <Error />,
       },
-      { path: "/login", element: <Auth /> },
-      { path: "/signup", element: <Auth /> },
+      { path: "/login", element: <Login /> },
+      { path: "/signup", element: <Signup /> },
+      { path: "/afterauth", element: <AfterAuth /> },
       {
         path: "/wellness-resources",
         element: <WellnessResources />,
