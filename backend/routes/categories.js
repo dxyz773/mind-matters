@@ -21,4 +21,21 @@ router.get("/", async function (req, res, next) {
 })
 
 
+
+/** GET /:categoryId
+ * Returns { tasks: [{ task_id, task, category_id, category },...] }
+ */
+
+router.get("/:categoryId", async function (req, res, next) {
+  try {
+    const { categoryId } = req.params;
+    const tasksByCategory = await Category.getAllByCategory(categoryId);
+    return res.json({ tasksByCategory });
+    
+  } catch (err) {
+    return next(err);
+  }
+})
+
+
 module.exports = router;
