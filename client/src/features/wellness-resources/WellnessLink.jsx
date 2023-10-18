@@ -1,20 +1,20 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 function WellnessLink({ topic }) {
+  const navigate = useNavigate();
   return (
     <li>
-      {/* <Link to={`/wellness-resources?topic=${topic.toLowerCase()}`}>
-        {topic}
-      </Link> */}
-      <Link
-        style={{ textDecoration: "none" }}
-        to={`/wellness-resources/${topic.toLowerCase().split(" ").join("-")}`}
+      <button
+        onClick={() => {
+          navigate(
+            `/wellness-resources/${topic.toLowerCase().split(" ").join("-")}`,
+          );
+        }}
       >
         {topic}
-      </Link>
+      </button>
     </li>
   );
 }
 
 export default WellnessLink;
-
-// .join("  ")
