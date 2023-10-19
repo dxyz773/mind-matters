@@ -1,2 +1,6 @@
 .DS_Store
 backend/node_modules
+.env
+client/.env
+client/.env
+client/.env
