@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const API_URL = "http://localhost:3001";
@@ -12,9 +12,7 @@ const Auth = () => {
 
   useEffect(() => {
     let cancelRequest = false;
-    console.log("this");
     const authToken = localStorage.getItem("psg_auth_token");
-    console.log("anything at all");
     axios
       .post(`${API_URL}/auth`, null, {
         headers: {
