@@ -3,7 +3,7 @@ import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
 function AppLayout() {
   return (
-    <div>
+    <div className="grid h-screen grid-rows-[auto_1fr_auto]">
       <Header />
       <main>
         <Outlet />
