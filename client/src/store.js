@@ -1,6 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import topicReducer from "./features/wellness-resources/topicSlice";
 
-const store = configureStore({ reducer: { topic: topicReducer } });
+const store = configureStore({ reducer: {} });
 
 export default store;

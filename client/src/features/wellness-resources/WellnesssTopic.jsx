@@ -1,8 +1,8 @@
-import { useSelector } from "react-redux";
+import { wellnessData } from "../../data/wellnessResourceData";
+import { useLoaderData } from "react-router-dom";
 
 function WellnesssTopic() {
-  const { currentTopic } = useSelector((store) => store.topic);
-
+  const currentTopic = useLoaderData();
   return (
     <div>
       <h3>{currentTopic.topic.split("-").join(" ").toUpperCase()}</h3>
@@ -25,3 +25,8 @@ function WellnesssTopic() {
 }
 
 export default WellnesssTopic;
+
+export function loader({ params }) {
+  const currentTopic = wellnessData.find((curr) => curr.topic === params.topic);
+  return currentTopic;
+}
