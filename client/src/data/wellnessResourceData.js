@@ -108,7 +108,38 @@ export const wellnessData = [
       },
     ],
   },
-  { topic: "movement" },
+  {
+    topic: "movement",
+    resources: [
+      {
+        statement: "What is movement?",
+        resource: [
+          {
+            data: "The act of moving your body. Examples of movement include dancing, exercising, stretching and walking.",
+          },
+        ],
+      },
+      {
+        statement: "What is the impact of movement on mental wellbeing?",
+        resource: [
+          {
+            data: "Exercise improves mental health by reducing anxiety, depression, and negative mood and by improving self-esteem and cognitive function. Health benefits from regular exercise that should be emphasized are the following:",
+          },
+          {
+            data: "Improved sleep | Increased interest in sex | Better endurance |Stress relief | Improvement in mood | Increased energy and stamina | Reduced tiredness that can increase mental alertness | Weight reduction | Reduced cholesterol and improved cardiovascular fitness",
+          },
+        ],
+      },
+    ],
+
+    links: [
+      {
+        title: "Exercise for Mental Health",
+        link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1470658/",
+      },
+    ],
+  },
+  //
   {
     topic: "social-connection",
     resources: [
@@ -145,5 +176,44 @@ export const wellnessData = [
       },
     ],
   },
-  { topic: "self-expression" },
+  {
+    topic: "self-expression",
+    resources: [
+      {
+        statement: "What is self expression?",
+        resource: [
+          {
+            data: "Self-expression is the ability to convey our thoughts, feelings, and identity in a meaningful way through various forms of creative communication like writing, art, music, or drama, fostering a deeper understanding of ourselves and our emotions.",
+          },
+        ],
+      },
+      {
+        statement: "What is the impact of self expression on mental wellbeing?",
+        resource: [
+          {
+            data: "Research has shown that self-expression in the arts positively affects mood, function, cognition, and behavior. Creative self-expression can reduce stress, increase a sense of well-being, and promote healing and resilience. Furthermore, self-expression plays a significant role in developing our capacity to relate to others and engage in deep relationships.",
+          },
+          {
+            data: "Engaging in creative activities can lead to a more positive outlook on life, improved problem-solving and critical thinking skills, and a deeper understanding of oneself. This in turn can lower stress, boost self-esteem and fight off sadness and worry.",
+          },
+        ],
+      },
+    ],
+
+    links: [
+      {
+        title:
+          "Finding Your Unique Path: Exploring the Importance of Self-Expression",
+        link: "https://mindowl.org/self-expression/",
+      },
+      {
+        title: "Expressive Arts Therapy and the Arts in Health",
+        link: "https://www.psychologytoday.com/us/blog/arts-and-health/201710/expressive-arts-therapy-and-the-arts-in-health",
+      },
+      {
+        title: "Creativity as a Wellness Practice",
+        link: "https://www.psychologytoday.com/us/blog/arts-and-health/201512/creativity-wellness-practice",
+      },
+    ],
+  },
 ];

@@ -5,15 +5,13 @@ import AppLayout from "./ui/AppLayout";
 import Error from "./ui/Error";
 import Home from "./ui/Home";
 import OurMission from "./ui/OurMission";
-import Auth from "./features/authentication/Auth";
 import UserAccount from "./features/user/UserAccount";
 import Signup from "./ui/Signup";
 import Login from "./ui/Login";
-import AfterAuth from "./features/user/AfterAuth"
+import AfterAuth from "./features/user/AfterAuth";
 import WellnessResourcePage from "./features/wellness-resources/WellnessResourcePage";
 import WellnesssTopic from "./features/wellness-resources/WellnesssTopic";
 // import WellnesssTopic from "./features/wellness-resources/WellnesssTopic";
-
 
 const router = createBrowserRouter([
   {
