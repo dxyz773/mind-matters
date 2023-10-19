@@ -1,15 +1,11 @@
-import { useState } from "react";
-import { useParams } from "react-router-dom";
-import { wellnessData } from "../../data/wellnessResourceData";
+import { useSelector } from "react-redux";
 
 function WellnesssTopic() {
-  const [currentTopic, setCurrentTopic] = useState(wellnessData[3]);
+  const { currentTopic } = useSelector((store) => store.topic);
 
-  const { topic } = useParams();
-  console.log(currentTopic);
   return (
     <div>
-      <h3>{topic.split("-").join(" ").toUpperCase()}</h3>
+      <h3>{currentTopic.topic.split("-").join(" ").toUpperCase()}</h3>
       {currentTopic.resources.map((resource) => (
         <div key={resource.statement}>
           <h4>{resource.statement}</h4>
