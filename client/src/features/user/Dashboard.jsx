@@ -1,9 +1,10 @@
+import CategoryList from "../wellness-tracker/CategoryList";
 import HighlightList from "./HighlightList";
 
 function Dashboard() {
   return (
-    <div>
-      <h4>Dashboard</h4>
+    <div className="grid grid-cols-[auto_1fr]">
+      <CategoryList />
       <HighlightList />
     </div>
   );

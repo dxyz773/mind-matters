@@ -1,13 +1,13 @@
 import Dashboard from "./Dashboard";
 import Tracker from "../wellness-tracker/Tracker";
-import { useParams } from "react-router-dom";
+import UserBio from "./UserBio";
+
 function UserAccount() {
-  const { username } = useParams();
   return (
-    <div>
-      <h2>User Profile</h2>
-      <h3>{`Welcome, ${username.toUpperCase()}`}</h3>
+    <div className="grid h-screen grid-cols-[1fr_auto] grid-rows-[auto_1fr_1fr]">
       <Dashboard />
+      <UserBio />
+
       <Tracker />
     </div>
   );
