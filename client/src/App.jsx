@@ -11,6 +11,7 @@ import Login from "./ui/Login";
 import AfterAuth from "./features/user/AfterAuth";
 import WellnessResourcePage from "./features/wellness-resources/WellnessResourcePage";
 import WellnesssTopic from "./features/wellness-resources/WellnesssTopic";
+import { loader as topicLoader } from "./features/wellness-resources/WellnesssTopic";
 // import WellnesssTopic from "./features/wellness-resources/WellnesssTopic";
 
 const router = createBrowserRouter([
@@ -33,7 +34,12 @@ const router = createBrowserRouter([
         element: <WellnessResourcePage />,
         errorElement: <Error />,
         children: [
-          { path: "/wellness-resources/:topic", element: <WellnesssTopic /> },
+          {
+            path: "/wellness-resources/:topic",
+            element: <WellnesssTopic />,
+            loader: topicLoader,
+            errorElement: <Error />,
+          },
         ],
       },
     ],
