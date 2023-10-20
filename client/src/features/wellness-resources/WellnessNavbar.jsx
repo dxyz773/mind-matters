@@ -9,7 +9,7 @@ function WellnessNavbar() {
   ];
   return (
     <div>
-      <ul style={{ listStyle: "none" }}>
+      <ul style={{ listStyle: "none", display: "flex" }}>
         {wellnessTopics.map((topic) => (
           <WellnessLink topic={topic} key={topic} />
         ))}
