@@ -4,7 +4,7 @@ import { useLoaderData } from "react-router-dom";
 function WellnesssTopic() {
   const currentTopic = useLoaderData();
   return (
-    <div>
+    <div id="card">
       <h3>{currentTopic.topic.split("-").join(" ").toUpperCase()}</h3>
       {currentTopic.resources.map((resource) => (
         <div key={resource.statement}>

@@ -1,5 +1,9 @@
 function Footer() {
-  return <footer className="ml-2">&copy; 2023 Wellness Warriors </footer>;
+  return <div id="footer">
+    <footer id="footerTeamName">&copy; 2023 Wellness Warriors </footer>
+    <button id="footerBtn">Contact Us</button>
+  </div>
+
 }
 
-export default Footer;
+export default Footer
