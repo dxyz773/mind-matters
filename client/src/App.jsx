@@ -12,6 +12,7 @@ import AfterAuth from "./features/user/AfterAuth";
 import WellnessResourcePage from "./features/wellness-resources/WellnessResourcePage";
 import WellnesssTopic from "./features/wellness-resources/WellnesssTopic";
 import { loader as topicLoader } from "./features/wellness-resources/WellnesssTopic";
+import { loader as categoryLoader } from "./features/wellness-tracker/CategoryList";
 // import WellnesssTopic from "./features/wellness-resources/WellnesssTopic";
 
 const router = createBrowserRouter([
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/mission", element: <OurMission /> },
       {
-        path: "/account/:username",
+        path: "/account",
         element: <UserAccount />,
         errorElement: <Error />,
       },
