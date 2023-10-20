@@ -1,0 +1,74 @@
+const db = require("../db");
+const { NotFoundError } = require("../expressErrors");
+
+class User {
+
+/** Get a single user.
+    Returns { id, username, first_name, last_name, img_url }
+    Throws NotFoundError if user not found.
+*/
+
+static async get(userId) {
+  const result = await db.query(`
+    SELECT u.id, username, first_name, last_name, img_url
+    FROM users u
+    WHERE id = $1`, [userId]);
+
+    const user = result.rows[0];
+
+    if (!user) throw new NotFoundError(`No user id: ${userId}`);
+
+    return user;
+}
+
+/** Get a user's tasks.
+    Returns { user_id, username, task_id, task, status }
+*/
+
+static async getUserTasks(userId) {
+  const result = await db.query(`
+    SELECT u.id AS user_id, username, ut.task_id, task, status
+    FROM users u
+    JOIN user_task ut
+    ON u.id = ut.user_id
+    JOIN tasks t
+    ON ut.task_id = t.id
+    WHERE u.id = $1`, [userId]);
+
+    return result.rows;
+}
+
+/** Add a task for a user.
+    Returns { user_id, task_id, status }
+*/
+
+static async addTask(user_id, task_id, status=false) {
+  const result = await db.query(`
+    INSERT INTO user_task (user_id, task_id, status)
+    VALUES ($1, $2, $3)
+    RETURNING user_id, task_id, status`, 
+    [user_id, task_id, status])
+
+  return result.rows[0];
+}
+
+/** Edit the task status for a user: false for incomplete or true for complete.
+    Returns { user_id, task_id, status }
+*/
+
+static async editTask(user_id, task_id, status) {
+  const result = await db.query(`
+    UPDATE user_task 
+    SET status = $3
+    WHERE user_id = $1 
+    AND task_id = $2
+    RETURNING user_id, task_id, status`, 
+    [user_id, task_id, status])
+
+  return result.rows[0];
+}
+
+
+}
+
+module.exports = User;

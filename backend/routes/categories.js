@@ -21,7 +21,6 @@ router.get("/", async function (req, res, next) {
 })
 
 
-
 /** GET /:categoryId
  * Returns { tasks: [{ task_id, task, category_id, category },...] }
  */
