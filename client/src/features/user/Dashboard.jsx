@@ -1,11 +1,10 @@
 import CategoryList from "../wellness-tracker/CategoryList";
-import HighlightList from "./HighlightList";
-
+import Tracker from "../wellness-tracker/Tracker";
 function Dashboard() {
   return (
     <div className="grid grid-cols-[auto_1fr]">
       <CategoryList />
-      <HighlightList />
+      <Tracker />
     </div>
   );
 }

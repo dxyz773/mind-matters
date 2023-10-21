@@ -1,10 +1,7 @@
 import { useState } from "react";
 import Category from "./Category";
 import { categories } from "../../data/categoryTestData";
-// import { getCategories } from "../../services/apiCategory";
-// import { useLoaderData } from "react-router-dom";
 function CategoryList() {
-  // const categories = useLoaderData();
   const [active, setActive] = useState(1);
 
   function handleActive(id) {
@@ -23,11 +20,6 @@ function CategoryList() {
       ))}
     </div>
   );
-}
-
-export async function loader() {
-  const categories = await getCategories();
-  return categories;
 }
 
 export default CategoryList;
