@@ -278,7 +278,6 @@
     margin-top: 200px;
     padding-left: 5px;
     padding-right: 2px;
-    width: 1420px;
     height: 206px;
     flex-shrink: 0;
     background-color: #F3D7E6;
@@ -303,39 +302,44 @@
 
 #wellnessResourcesTextAndBtnsContainer {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
 }
 
 #wellnessResourcesTextContainer {
-    background-color: deeppink;
     display: flex;
     flex-direction: column;
-    padding: 30px;
-    margin-top: 85px;
+    width: auto;
+    padding-top: 70px;
+    padding-left: 40px;
+    /* padding: 80px;
+    margin-top: 130px; */
 }
 
 #wellnessResourcesTitle {
     color: var(--txt, #1A1A1A);
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 75px;
+    font-size: 55px;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
-    width: 750px;
-    height: 298px;
+    width: 650px;
+    height: 280px;
 }
 
 #data {
     color: #E298B7;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 75px;
+    font-size: 55px;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
 }
 
 #wellnessResourcesBlurb {
-    width: 745px;
+    width: 645px;
     height: 354px;
     flex-shrink: 0;
     color: var(--txt, #1A1A1A);
@@ -345,7 +349,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    padding: 20px;
 }
 
 #resourcesSelectionBtnsContainer {
@@ -354,9 +357,8 @@
     grid-template-columns: 300px 300px;
     row-gap: 70px;
     column-gap: 10px;
-    width: 139px;
-    height: 65px;
-    padding: 200px 20px;
+    /* height: 65px;
+    padding: 270px 80px; */
 
 
     /* display: grid;
@@ -373,8 +375,8 @@
     background: rgba(30, 189, 199, 0.66);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     display: flex;
-    width: 230px;
-    height: 65px;
+    width: 190px;
+    height: 45px;
     padding: 10px 30px;
     align-items: center;
     justify-content: center;
@@ -382,7 +384,7 @@
     flex-shrink: 0;
     color: var(--txt, #FFF);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 200;
     line-height: normal;
@@ -396,8 +398,87 @@
 
 
 #card {
+    /* Located in WellnessTopic.jsx */
     background: rgba(117, 210, 230, 0.23);
-    width: 1965px;
-    height: 949px;
+
+}
+
+#currentTopic {
+    color: var(--txt, #1A1A1A);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    width: 602px;
+    height: 97px;
     flex-shrink: 0;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+#cardInfoProfileBtnAndImage {
+    display: flex;
+    padding: 70px;
+}
+
+#cardInfoAndAddToProfileBtn {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 745px;
+    height: 354px;
+
+}
+
+#resourceQuestions {
+    color: var(--txt, #1A1A1A);
+    text-align: start;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+#resourceQuestionResponses {
+    color: var(--txt, #1A1A1A);
+    text-align: start;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#furtherReading {
+    color: blue;
+    text-align: start;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+#addToProfileBtnContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#addToProfileBtn {
+    padding: 15px;
+    gap: 10px;
+    border-radius: 30px;
+    background: rgba(218, 123, 180, 0.69);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    width: 250px;
+}
+
+#imageContainer {
+    display: flex;
+    align-items: center;
 }
