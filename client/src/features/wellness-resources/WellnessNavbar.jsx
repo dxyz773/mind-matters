@@ -8,8 +8,8 @@ function WellnessNavbar() {
     "Self-expression",
   ];
   return (
-    <div>
-      <ul style={{ listStyle: "none", display: "flex" }}>
+    <div id="resourcesPageContainer">
+      <ul id="resourcesSelectionBtnsContainer" style={{ listStyle: "none" }}>
         {wellnessTopics.map((topic) => (
           <WellnessLink topic={topic} key={topic} />
         ))}
