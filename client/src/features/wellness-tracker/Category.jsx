@@ -1,30 +1,9 @@
-import { useEffect, useState } from "react";
-const API_URL = "http://localhost:3001";
-
-function Category({ current, active, handleActive }) {
+function Category({ current, active, handleActive, tasks }) {
   const { id, category } = current;
-  const [tasks, setTasks] = useState("10 minute meditation");
-
-  useEffect(
-    function () {
-      async function getTasksByCategory(id) {
-        try {
-          const res = await fetch(`${API_URL}/categories/${id}`);
-          if (!res.ok) throw Error();
-
-          const { data } = await res.json();
-          setTasks(data);
-        } catch (err) {
-          Error(`Failed to fetch tasks by ${id}`);
-        }
-      }
-      getTasksByCategory(id);
-    },
-    [id],
-  );
+  const activeTasks = tasks.filter((task) => task.category_id === active);
   return (
     <div
-      className="collapse-plus bg-base-200 collapse"
+      className="collapse-plus collapse bg-base-200"
       onChange={() => handleActive(id)}
     >
       <input
@@ -34,9 +13,15 @@ function Category({ current, active, handleActive }) {
         checked={active === id ? "checked" : ""}
       />
       <div className="collapse-title text-xl font-medium">{category}</div>
-      <div className="collapse-content flex gap-2">
-        <p>{tasks}</p>
-        <button className="w-5 rounded-full bg-yellow-200">+</button>
+      <div className="collapse-content flex flex-col gap-2">
+        {activeTasks.map((task) => (
+          <div key={task.task_id} className="flex justify-between">
+            <p className="mr-3"> {task.task}</p>
+            <button className="w-5 rounded-full bg-yellow-200 hover:bg-yellow-300">
+              +
+            </button>
+          </div>
+        ))}
       </div>
     </div>
   );

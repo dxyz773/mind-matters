@@ -1,13 +1,13 @@
-import { useState } from "react";
 import Category from "./Category";
-import { categories } from "../../data/categoryTestData";
-function CategoryList() {
-  const [active, setActive] = useState(1);
 
-  function handleActive(id) {
+import { useState } from "react";
+
+function CategoryList({ categories, tasks }) {
+  const [active, setActive] = useState(1);
+  // const currentTasks
+  function handleChange(id) {
     setActive(id);
   }
-
   return (
     <div className="mx-3 my-3">
       {categories.map((current) => (
@@ -15,7 +15,8 @@ function CategoryList() {
           key={current.category}
           current={current}
           active={active}
-          handleActive={handleActive}
+          tasks={tasks}
+          handleActive={handleChange}
         />
       ))}
     </div>

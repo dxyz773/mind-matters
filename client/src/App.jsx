@@ -11,6 +11,7 @@ import AfterAuth from "./features/user/AfterAuth";
 import WellnessResourcePage from "./features/wellness-resources/WellnessResourcePage";
 import WellnesssTopic from "./features/wellness-resources/WellnesssTopic";
 import { loader as topicLoader } from "./features/wellness-resources/WellnesssTopic";
+import { loader as mainLoader } from "./features/user/UserAccount";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
       {
         path: "/account",
         element: <UserAccount />,
+        loader: mainLoader,
         errorElement: <Error />,
       },
       { path: "/login", element: <Login /> },
