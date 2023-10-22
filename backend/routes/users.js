@@ -70,33 +70,37 @@ router.patch("/:userId/tasks", async function (req, res, next) {
   }
 })
 
-// const passage = new Passage({
-//   appID: process.env.PASSAGE_APP_ID,
-//   apiKey: process.env.PASSAGE_API_KEY,
-//   authStrategy: "HEADER",
-// });
+const passage = new Passage({
+  appID: process.env.PASSAGE_APP_ID,
+  apiKey: process.env.PASSAGE_API_KEY,
+  authStrategy: "HEADER",
+});
 
-// app.post("/auth", async (req, res) => {
-//   try {
-//     const userID = await passage.authenticateRequest(req);
-//     if (userID) {
-//       // user is authenticated
-//       const { email, phone, } = await passage.user.get(userID);
-//       const identifier = email ? email : phone;
+router.post("/auth", async (req, res) => {
+  try {
+    const userID = await passage.authenticateRequest(req);
+    if (userID) {
+      // user is authenticated by Passage
+      const { email, phone, user_metadata } = await passage.user.get(userID);
+      // check if user exists in db or register user in db
+      const user = await User.checkExistOrRegister(email, user_metadata.first_name, user_metadata.last_name)
+      console.log('app user:', user)
+      const identifier = email ? email : phone;
 
-//       res.json({
-//         authStatus: "success",
-//         identifier,
-//       });
-//     }
-//   } catch (e) {
-//     // authentication failed
-//     console.log(e);
-//     res.json({
-//       authStatus: "failure",
-//     });
-//   }
-// });
+      res.json({
+        authStatus: "success",
+        identifier,
+        user
+      });
+    }
+  } catch (e) {
+    // authentication failed
+    console.log(e);
+    res.json({
+      authStatus: "failure",
+    });
+  }
+});
 
 
 module.exports = router;

@@ -28,18 +28,6 @@ CREATE TABLE user_task (
 );
 
 
-
-CREATE TABLE users (
-  id SERIAL PRIMARY KEY,
-  username VARCHAR(30) UNIQUE NOT NULL,
-  first_name TEXT NOT NULL,
-  last_name TEXT NOT NULL,
-  email TEXT,
-  img_url TEXT,
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
-);
-
-
 -- Sample user:
 -- INSERT INTO users (username, first_name, last_name, email) 
 -- VALUES ('testuser', 'test', 'user', 'test@test.com');

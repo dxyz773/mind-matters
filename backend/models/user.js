@@ -1,7 +1,38 @@
 const db = require("../db");
-const { NotFoundError } = require("../expressErrors");
+const { NotFoundError, BadRequestError } = require("../expressErrors");
 
 class User {
+
+/** Register user with data. Email provided by user will be stored as   username.
+    Returns { id, username, first_name, last_name} 
+    Throws BadRequestError on duplicate username.
+*/
+
+static async checkExistOrRegister(username, firstName, lastName) {
+  const duplicateCheck = await db.query(`
+    SELECT id, username, first_name AS "firstName", last_name AS "lastName"
+    FROM users
+    WHERE username = $1`,
+    [username]
+  );
+
+  if (duplicateCheck.rows[0]) {
+    let existingUser = duplicateCheck.rows[0];
+    return existingUser;
+  }
+
+  const result = await db.query(`
+    INSERT INTO users
+      (username, first_name, last_name)
+    VALUES ($1, $2, $3)
+    RETURNING id, username, first_name AS "firstName", last_name AS "lastName"`,
+    [username, firstName, lastName]
+  )
+  
+  const user = result.rows[0];
+
+  return user;
+}
 
 /** Get a single user.
     Returns { id, username, first_name, last_name, img_url }
