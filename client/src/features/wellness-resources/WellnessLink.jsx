@@ -8,7 +8,7 @@ function WellnessLink({ topic }) {
 
   return (
     <li>
-      <button
+      <button id="resourcesBtns"
         onClick={() => {
           // dispatch(updateTopic(topic.toLowerCase().split(" ").join("-")));
           navigate(
