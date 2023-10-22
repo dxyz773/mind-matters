@@ -1,8 +1,7 @@
 import Auth from '../authentication/Auth';
 
-
 function AfterAuth() {
-    const {isLoading, isAuthorized, username} = Auth();
+    const {isLoading, isAuthorized, username, userId} = Auth();
     console.log(JSON.stringify(isAuthorized));
     if (isLoading) {
         return null;
