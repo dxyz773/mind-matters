@@ -1,4 +1,4 @@
-import '@passageidentity/passage-elements/passage-login';
+import "@passageidentity/passage-elements/passage-login";
 
 function Login() {
   return (
