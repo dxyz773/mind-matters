@@ -3,9 +3,6 @@ function Navbar() {
   return (
     <ul style={{ listStyle: "none", display: "flex", gap: "10px" }}>
       <li>
-        <Link to="/mission">Our Mission</Link>
-      </li>
-      <li>
         <Link to="/wellness-resources">Wellness Resources</Link>
       </li>
       <li>

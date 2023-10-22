@@ -1,11 +1,21 @@
 import CategoryList from "../wellness-tracker/CategoryList";
-import HighlightList from "./HighlightList";
+import Tracker from "../wellness-tracker/Tracker";
 
-function Dashboard() {
+function Dashboard({
+  categories,
+  tasks,
+  userTasks,
+  onUpdateTaskStatus,
+  onAddTask,
+}) {
   return (
     <div className="grid grid-cols-[auto_1fr]">
-      <CategoryList />
-      <HighlightList />
+      <CategoryList
+        categories={categories}
+        tasks={tasks}
+        onAddTask={onAddTask}
+      />
+      <Tracker userTasks={userTasks} onUpdateTaskStatus={onUpdateTaskStatus} />
     </div>
   );
 }
