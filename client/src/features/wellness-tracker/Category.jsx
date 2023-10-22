@@ -1,9 +1,13 @@
-function Category({ current, active, handleActive, tasks }) {
+function Category({ current, active, handleActive, tasks, onAddTask }) {
   const { id, category } = current;
   const activeTasks = tasks.filter((task) => task.category_id === active);
+
+  function handleAddTask(task_id) {
+    onAddTask(task_id);
+  }
   return (
     <div
-      className="collapse-plus collapse bg-base-200"
+      className="collapse collapse-plus bg-base-200"
       onChange={() => handleActive(id)}
     >
       <input
@@ -17,7 +21,10 @@ function Category({ current, active, handleActive, tasks }) {
         {activeTasks.map((task) => (
           <div key={task.task_id} className="flex justify-between">
             <p className="mr-3"> {task.task}</p>
-            <button className="w-5 rounded-full bg-yellow-200 hover:bg-yellow-300">
+            <button
+              onClick={() => handleAddTask(task.task_id)}
+              className="w-5 rounded-full bg-yellow-200 hover:bg-yellow-300"
+            >
               +
             </button>
           </div>

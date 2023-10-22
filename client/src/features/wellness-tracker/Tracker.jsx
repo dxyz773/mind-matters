@@ -1,6 +1,6 @@
 import Completed from "./Completed";
 import ToDos from "./ToDos";
-function Tracker({ userTasks }) {
+function Tracker({ userTasks, onUpdateTaskStatus }) {
   const toDo = userTasks.filter((task) => task.status === false);
   const complete = userTasks.filter((task) => task.status === true);
 
@@ -10,7 +10,7 @@ function Tracker({ userTasks }) {
         Wellness Tracker
       </h4>
       <div className="flex justify-center gap-7">
-        <ToDos tasks={toDo} />
+        <ToDos tasks={toDo} onUpdateTaskStatus={onUpdateTaskStatus} />
         <Completed tasks={complete} />
       </div>
     </div>
