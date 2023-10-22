@@ -1,10 +1,9 @@
-// import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // COMPONENTS
 import AppLayout from "./ui/AppLayout";
 import Error from "./ui/Error";
 import Home from "./ui/Home";
-import OurMission from "./ui/OurMission";
+
 import UserAccount from "./features/user/UserAccount";
 import Signup from "./ui/Signup";
 import Login from "./ui/Login";
@@ -12,8 +11,8 @@ import AfterAuth from "./features/user/AfterAuth";
 import WellnessResourcePage from "./features/wellness-resources/WellnessResourcePage";
 import WellnesssTopic from "./features/wellness-resources/WellnesssTopic";
 import { loader as topicLoader } from "./features/wellness-resources/WellnesssTopic";
-import { loader as categoryLoader } from "./features/wellness-tracker/CategoryList";
-// import WellnesssTopic from "./features/wellness-resources/WellnesssTopic";
+import { loader as mainLoader } from "./features/user/UserAccount";
+import WaitingRoom from "./features/user/WaitingRoom";
 
 const router = createBrowserRouter([
   {
@@ -21,10 +20,15 @@ const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       { path: "/", element: <Home /> },
-      { path: "/mission", element: <OurMission /> },
       {
-        path: "/account",
+        path: "/pending",
+        element: <WaitingRoom />,
+        errorElement: <Error />,
+      },
+      {
+        path: "/account/:userId",
         element: <UserAccount />,
+        loader: mainLoader,
         errorElement: <Error />,
       },
       { path: "/login", element: <Login /> },
