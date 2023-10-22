@@ -1,7 +1,7 @@
 # Mind Matters
 
 ## Introduction
-Mind Matters is an application designed to help individuals improve their well-being and mental health by providing a structured way to engage in self-care tasks. It offers a task tracking system to motivate users to perform these tasks regularly. In addition, the app provides a wealth of wellness resources and information on how to perform various self-care tasks effectively.
+This repository was created as part of the Women Who Code Hackathon For Social Code 2023. Mind Matters is an application designed to help individuals improve their well-being and mental health by providing a structured way to engage in self-care tasks. It offers a task tracking system to motivate users to perform these tasks regularly. In addition, the app provides a wealth of wellness resources and information on how to perform various self-care tasks effectively.
 
 ## Problem Statement
 Maintaining mental health and well-being is essential, but many people struggle to establish and stick to a self-care routine. Our app addresses this challenge by offering a solution that encourages users to engage in tasks that promote mental health and overall well-being. Moreover, we understand that individuals may need guidance on how to perform self-care tasks effectively.
@@ -9,7 +9,6 @@ Maintaining mental health and well-being is essential, but many people struggle 
 ## Key Features
 - **Task Tracking:** Users can create and track self-care tasks they want to perform regularly.
 - **Motivation:** The app provides a motivating system to encourage users to complete their tasks.
-- **Progress Monitoring:** Users can monitor their task completion progress over time.
 - **User-Friendly Interface:** A simple and intuitive user interface for an enjoyable user experience.
 - **Wellness Resources:** Access resources explaining how to perform different activities to improve mental well-being.
 
@@ -21,26 +20,24 @@ Users choose from a variety of self-care tasks organized by category. Users sele
 ### Frontend
 The Well-Being and Mental Health Task Tracker utilizes a comprehensive tech stack to deliver a robust and engaging user experience.
 
-- **React**: The frontend of our application is built using React, a powerful JavaScript library for creating dynamic and interactive user interfaces. React enables us to develop a responsive and user-friendly front-end.
+- **React**:
 
-- **JavaScript**: JavaScript is the primary programming language for our application. It is essential for building the logic and interactivity of our frontend components.
+- **JavaScript**
 
-- **Tailwind CSS**: We leverage Tailwind CSS for styling and layout. Tailwind is a utility-first CSS framework that facilitates rapid UI development and customization. It helps us maintain a clean and consistent design.
+- **Tailwind CSS**
 
-- **DaisyUI**: DaisyUI is an extension for Tailwind CSS that provides additional utility classes and components. It enhances our design capabilities and streamlines the styling process.
+- **DaisyUI**
 
 ### Backend
 For the backend of our application, we have chosen a versatile tech stack that offers reliability and scalability:
 
-- **Node.js**: Node.js is the foundation of our backend, enabling us to build server-side applications efficiently. It is known for its speed and versatility.
+- **Node.js**
 
-- **Express.js**: We use Express.js, a popular web application framework for Node.js. Express provides the essential features and tools for routing, middleware, and API development.
+- **Express.js**
 
-- **PostgreSQL**: Our application relies on PostgreSQL, a robust and open-source relational database management system (RDBMS). PostgreSQL ensures the secure storage and retrieval of user data and task information.
-
+- **PostgreSQL**
 ### Design and Collaboration
-- **Figma**: Figma is our primary design and collaboration tool. It empowers our design team to create interactive prototypes, iterate on the user interface, and collaborate effectively. Figma plays a crucial role in shaping our app's visual design.
-
+- **Figma**:
 ## Instructions to run client in development:
 
 #### FIRST TIME running client:
