@@ -11,6 +11,7 @@ Maintaining mental health and well-being is essential, but many people struggle 
 - **Motivation:** The app provides a motivating system to encourage users to complete their tasks.
 - **User-Friendly Interface:** A simple and intuitive user interface for an enjoyable user experience.
 - **Wellness Resources:** Access resources explaining how to perform different activities to improve mental well-being.
+- **Passage by 1Password:** Passwordless authentication service using one-time code or passkey.
 
 ## How It Works
 Users choose from a variety of self-care tasks organized by category. Users select the task they wish to perform. Users can monitor their task completion progress and track improvements in their well-being and mental health over time.
@@ -37,7 +38,7 @@ For the backend of our application, we have chosen a versatile tech stack that o
 
 - **PostgreSQL**
 ### Design and Collaboration
-- **Figma**:
+- **Figma**
 ## Instructions to run client in development:
 
 #### FIRST TIME running client:
@@ -79,12 +80,12 @@ npm run dev
 
 
 ### First Time adding .env variables:
-1. Make sure you have a .env file inside your backend folder
-2. go to the passage console for wellness warriors
-3. click on the mind matters application
-4. in the .env file paste the ap ID into PASSAGE_APP_ID=
-5. go to API Keys in the passage console
-6. create a new key 
-7. copy the value of that key into the .env file after PASSAGE_API_KEY=
-8. make sure you dont track the .env file 
+1. Make sure you have a .env file inside your backend and frontend folders
+2. Go to the Passage console for Wellness Warriors
+3. Click on the Mind Matters application
+4. In the .env file paste the app ID into PASSAGE_APP_ID=
+5. Go to API Keys in the passage console
+6. Create a new key 
+7. Copy the value of that key into the .env file after PASSAGE_API_KEY=
+8. Make sure you don't track the .env file 
 
