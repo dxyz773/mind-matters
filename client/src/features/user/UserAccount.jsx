@@ -23,7 +23,7 @@ function UserAccount() {
 
   const navigate = useNavigate();
   async function handleUpdateUserTaskStatus(userTask) {
-    const updatedTask = await updateTask(userTask);
+    const updatedTask = await updateTask(userTask, userData.id);
 
     setUserTaskData(
       userTaskData.filter((task) => {
@@ -34,7 +34,7 @@ function UserAccount() {
     );
   }
   async function handleAddTask(task_id) {
-    const newUserTaskData = await AddUserTask(task_id);
+    const newUserTaskData = await AddUserTask(task_id, userData.id);
     const newTaskData = newUserTaskData.newTask;
     const returnedTask = taskData.find(
       (task) => task.task_id === newTaskData.task_id,
