@@ -77,7 +77,7 @@ export async function updateTask(task) {
 export async function AddUserTask(task_id) {
   // const user_id = task.user_id;
   const taskId = task_id;
-  console.log(taskId);
+
   try {
     const res = await fetch(`${API_URL}/users/1/tasks`, {
       method: "POST",
@@ -86,7 +86,7 @@ export async function AddUserTask(task_id) {
     });
     if (!res.ok) throw Error();
     const data = await res.json();
-    console.log(data);
+
     return data;
   } catch (error) {
     Error("Failed to fetch categories");

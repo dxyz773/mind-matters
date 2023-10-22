@@ -7,7 +7,7 @@ function Category({ current, active, handleActive, tasks, onAddTask }) {
   }
   return (
     <div
-      className="collapse collapse-plus bg-base-200"
+      className="collapse collapse-plus border border-stone-200 bg-base-200 shadow-md"
       onChange={() => handleActive(id)}
     >
       <input

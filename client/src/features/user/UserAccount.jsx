@@ -46,7 +46,7 @@ function UserAccount() {
   }
 
   return (
-    <div className="h-100 grid grid-cols-[1fr_auto] grid-rows-[auto_1fr_1fr] bg-stone-100">
+    <div className="h-100 grid-rows-[auto_1fr_1fr grid grid-cols-[1fr_auto]">
       <Dashboard
         categories={categoryData}
         tasks={taskData}
