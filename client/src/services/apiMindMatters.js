@@ -28,9 +28,9 @@ export async function getAllTasks() {
 
 // ----------- FETCH USER ---------- //
 
-export async function getUser(user_id) {
+export async function getUser(userId) {
   try {
-    const res = await fetch(`${API_URL}/users/1`);
+    const res = await fetch(`${API_URL}/users/${userId}`);
     if (!res.ok) throw Error();
     const data = await res.json();
     return data;
@@ -40,9 +40,9 @@ export async function getUser(user_id) {
 }
 
 // ----------- FETCH USER TASKS ---------- //
-export async function getUserTasks(user_id) {
+export async function getUserTasks(userId) {
   try {
-    const res = await fetch(`${API_URL}/users/1/tasks`);
+    const res = await fetch(`${API_URL}/users/${userId}/tasks`);
     if (!res.ok) throw Error();
     const data = await res.json();
     return data;
@@ -52,13 +52,13 @@ export async function getUserTasks(user_id) {
 }
 // ----------- UPDATE USER TASK ---------- //
 
-export async function updateTask(task) {
+export async function updateTask(task, userId) {
   // const user_id = task.user_id;
   const taskId = task.task_id;
   const status = task.status;
 
   try {
-    const res = await fetch(`${API_URL}/users/1/tasks`, {
+    const res = await fetch(`${API_URL}/users/${userId}/tasks`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ taskId, status }),
@@ -74,12 +74,12 @@ export async function updateTask(task) {
 
 // ----------- ADD USER TASK ---------- //
 
-export async function AddUserTask(task_id) {
+export async function AddUserTask(task_id, userId) {
   // const user_id = task.user_id;
   const taskId = task_id;
 
   try {
-    const res = await fetch(`${API_URL}/users/1/tasks`, {
+    const res = await fetch(`${API_URL}/users/${userId}/tasks`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ taskId }),

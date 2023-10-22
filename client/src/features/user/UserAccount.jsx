@@ -1,4 +1,5 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
+import Auth from "../authentication/Auth";
 import {
   AddUserTask,
   getAllTasks,
@@ -18,6 +19,9 @@ function UserAccount() {
   const [userData, setUserData] = useState(user.user);
   const [userTaskData, setUserTaskData] = useState(userTasks.userTasks);
 
+  const { isLoading, isAuthorized, username, userId } = Auth();
+
+  const navigate = useNavigate();
   async function handleUpdateUserTaskStatus(userTask) {
     const updatedTask = await updateTask(userTask);
 
@@ -47,14 +51,24 @@ function UserAccount() {
 
   return (
     <div className="h-100 grid-rows-[auto_1fr_1fr grid grid-cols-[1fr_auto]">
-      <Dashboard
-        categories={categoryData}
-        tasks={taskData}
-        userTasks={userTaskData}
-        onUpdateTaskStatus={handleUpdateUserTaskStatus}
-        onAddTask={handleAddTask}
-      />
-      <UserBio userData={userData} />
+      {isAuthorized ? (
+        <>
+          <Dashboard
+            categories={categoryData}
+            tasks={taskData}
+            userTasks={userTaskData}
+            onUpdateTaskStatus={handleUpdateUserTaskStatus}
+            onAddTask={handleAddTask}
+          />
+          <UserBio userData={userData} />
+        </>
+      ) : (
+        <>
+          <h3>Please login or signup to track your wellness</h3>
+          <button onClick={navigate("/login")}>Login</button>
+          <button onClick={navigate("/signup")}>Signup</button>
+        </>
+      )}
     </div>
   );
 }
@@ -62,8 +76,8 @@ function UserAccount() {
 export async function loader({ params }) {
   const categories = await getCategories();
   const tasks = await getAllTasks();
-  const user = await getUser();
-  const userTasks = await getUserTasks();
+  const user = await getUser(params.userId);
+  const userTasks = await getUserTasks(params.userId);
   return [categories, tasks, user, userTasks];
 }
 export default UserAccount;
