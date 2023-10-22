@@ -3,9 +3,8 @@ const { NotFoundError, BadRequestError } = require("../expressErrors");
 
 class User {
 
-/** Register user with data. Email provided by user will be stored as   username.
+/** Check if user exists or register user with data. Email provided by user will be stored as username.
     Returns { id, username, first_name, last_name} 
-    Throws BadRequestError on duplicate username.
 */
 
 static async checkExistOrRegister(username, firstName, lastName) {

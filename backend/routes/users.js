@@ -8,7 +8,6 @@ const User = require("../models/user");
 
 /** GET /users/:userId => { user }
  * Returns { id, username, first_name, last_name, img_url}
- * Authorization required: 1Password Passage?
  */
 
 router.get("/:userId", async function (req, res, next) {
@@ -21,10 +20,8 @@ router.get("/:userId", async function (req, res, next) {
   }
 })
 
-
 /** GET /users/:userId/tasks => { userTasks }
  * Returns { id, username, task, status }
- * Authorization required: 1Password Passage?
  */
 
 router.get("/:userId/tasks", async function (req, res, next) {
@@ -37,11 +34,9 @@ router.get("/:userId/tasks", async function (req, res, next) {
   }
 })
 
-
 /** POST /users/:userId/tasks => { newTask }
  * Data body to include { taskId }
  * Returns { user_id, username, task_id, task, status }
- * Authorization required: 1Password Passage?
  */
 
 router.post("/:userId/tasks", async function (req, res, next) {
@@ -57,7 +52,6 @@ router.post("/:userId/tasks", async function (req, res, next) {
 /** PATCH /users/:userId/tasks => { editTask }
  * Data body to include { taskId, status }
  * Returns { user_id, task_id, status }
- * Authorization required: 1Password Passage?
  */
 
 router.patch("/:userId/tasks", async function (req, res, next) {
@@ -69,6 +63,13 @@ router.patch("/:userId/tasks", async function (req, res, next) {
     return next(err);
   }
 })
+
+/** POST /users/auth => { editTask }
+ * User authentication via Passage method: authenticateRequest.
+ * Check for existing user or register user in database.
+ * Returns { authStatus, identifier, user }
+ * User returned from database contains { id, username, firstName, lastName }
+ */
 
 const passage = new Passage({
   appID: process.env.PASSAGE_APP_ID,
