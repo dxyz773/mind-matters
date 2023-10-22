@@ -12,6 +12,7 @@ import WellnessResourcePage from "./features/wellness-resources/WellnessResource
 import WellnesssTopic from "./features/wellness-resources/WellnesssTopic";
 import { loader as topicLoader } from "./features/wellness-resources/WellnesssTopic";
 import { loader as mainLoader } from "./features/user/UserAccount";
+import WaitingRoom from "./features/user/WaitingRoom";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +21,12 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       {
-        path: "/account",
+        path: "/pending",
+        element: <WaitingRoom />,
+        errorElement: <Error />,
+      },
+      {
+        path: "/account/:userId",
         element: <UserAccount />,
         loader: mainLoader,
         errorElement: <Error />,

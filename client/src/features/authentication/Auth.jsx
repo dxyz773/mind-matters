@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const API_URL = "http://localhost:3001";
+const API_URL = "https://mindmatters-backend.onrender.com";
 
 const Auth = () => {
   const [result, setResult] = useState({
     isLoading: true,
     isAuthorized: false,
     username: "",
-    userId: ""
+    userId: "",
   });
 
   useEffect(() => {
@@ -31,14 +31,14 @@ const Auth = () => {
             isLoading: false,
             isAuthorized: authStatus,
             username: identifier,
-            userId: user.id
+            userId: user.id,
           });
         } else {
           setResult({
             isLoading: false,
             isAuthorized: false,
             username: "",
-            userId: ""
+            userId: "",
           });
         }
       })
@@ -48,7 +48,7 @@ const Auth = () => {
           isLoading: false,
           isAuthorized: false,
           username: "",
-          userId: ""
+          userId: "",
         });
       });
 
@@ -57,9 +57,7 @@ const Auth = () => {
     };
   }, []);
 
-  return (
-    result
-  );
+  return result;
 };
 
 export default Auth;
