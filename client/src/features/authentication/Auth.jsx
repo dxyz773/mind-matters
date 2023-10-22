@@ -8,13 +8,14 @@ const Auth = () => {
     isLoading: true,
     isAuthorized: false,
     username: "",
+    userId: ""
   });
 
   useEffect(() => {
     let cancelRequest = false;
     const authToken = localStorage.getItem("psg_auth_token");
     axios
-      .post(`${API_URL}/auth`, null, {
+      .post(`${API_URL}/users/auth`, null, {
         headers: {
           Authorization: `Bearer ${authToken}`,
         },
@@ -23,19 +24,21 @@ const Auth = () => {
         if (cancelRequest) {
           return;
         }
-        const { authStatus, identifier } = response.data;
+        const { authStatus, identifier, user } = response.data;
         console.log("response is " + JSON.stringify(response.data));
         if (authStatus === "success") {
           setResult({
             isLoading: false,
             isAuthorized: authStatus,
             username: identifier,
+            userId: user.id
           });
         } else {
           setResult({
             isLoading: false,
             isAuthorized: false,
             username: "",
+            userId: ""
           });
         }
       })
@@ -45,6 +48,7 @@ const Auth = () => {
           isLoading: false,
           isAuthorized: false,
           username: "",
+          userId: ""
         });
       });
 
