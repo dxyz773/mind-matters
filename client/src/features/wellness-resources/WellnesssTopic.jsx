@@ -5,14 +5,18 @@ function WellnesssTopic() {
   const currentTopic = useLoaderData();
   return (
     <div id="card">
-      <h3 id="currentTopic">{currentTopic.topic.split("-").join(" ").toUpperCase()}</h3>
+      <h3 id="currentTopic">
+        {currentTopic.topic.split("-").join(" ").toUpperCase()}
+      </h3>
       <div id="cardInfoProfileBtnAndImage">
         <div id="cardInfoAndAddToProfileBtn">
           {currentTopic.resources.map((resource) => (
             <div key={resource.statement}>
-              <h4 id="resourceQuestions" >{resource.statement}</h4>
+              <h4 id="resourceQuestions">{resource.statement}</h4>
               {resource.resource.map((fact) => (
-                <p id="resourceQuestionResponses" key={fact.data}>{fact.data}</p>
+                <p id="resourceQuestionResponses" key={fact.data}>
+                  {fact.data}
+                </p>
               ))}
             </div>
           ))}
