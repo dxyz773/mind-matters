@@ -1,6 +1,7 @@
 export const wellnessData = [
   {
     topic: "meditation",
+    color: "#75D2E6",
     resources: [
       {
         statement: "What is meditation?",
@@ -61,6 +62,7 @@ export const wellnessData = [
   },
   {
     topic: "time-in-nature",
+    color: "#B3ECC7",
     resources: [
       {
         statement: "What is a “Green Space”?",
@@ -110,6 +112,7 @@ export const wellnessData = [
   },
   {
     topic: "movement",
+    color: "#FFBF1C",
     resources: [
       {
         statement: "What is movement?",
@@ -142,6 +145,7 @@ export const wellnessData = [
   //
   {
     topic: "social-connection",
+    color: "#AC7FF4",
     resources: [
       {
         statement: "What is social connection?",
@@ -178,6 +182,7 @@ export const wellnessData = [
   },
   {
     topic: "self-expression",
+    color: "#F6CFAD",
     resources: [
       {
         statement: "What is self expression?",

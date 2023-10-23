@@ -19,13 +19,8 @@ function Home() {
         {/* <link rel="img" type="image/svg+xml" href="/targetPhone.svg" /> */}
       </div>
     </div>
-
-  </div>
-
-
+  );
 }
 
 export default Home;
 Home;
-
-
