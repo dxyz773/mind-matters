@@ -3,268 +3,271 @@
 @tailwind utilities;
 
 body {
-  color: #1a1a1a;
-}
-#header {
-  display: flex;
+    color: #1a1a1a;
 }
 
 #header {
-  display: flex;
+    display: flex;
+}
+
+#mmLogo {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
 }
 
 #homeIntro {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
 }
 
 #stay_on_track {
-  top: 0px;
-  margin-bottom: 20px;
-  width: 983px;
-  height: 328.5px;
-  overflow: hidden;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 75px;
-  font-weight: bold;
-  text-align: center;
-  color: #1a1a1a;
+    top: 0px;
+    margin-bottom: 20px;
+    width: 983px;
+    height: 328.5px;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 75px;
+    font-weight: bold;
+    text-align: center;
+    color: #1a1a1a;
 }
 
 #well-being {
-  color: #df9cb7;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 75px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
+    color: #df9cb7;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 75px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
 }
 
 #receive_personalized {
-  margin-top: 20px;
-  color: var(--txt, #1a1a1a);
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 21px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  width: 777px;
+    margin-top: 20px;
+    color: var(--txt, #1a1a1a);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 777px;
 }
 
 #homepageButtons {
-  display: flex;
-  justify-content: center;
-  gap: 10px 5%;
-  padding: 20px;
-  margin: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px 5%;
+    padding: 20px;
+    margin: 10px;
 }
 
 #learnMoreBtn {
-  border-radius: 30px;
-  background: rgba(117, 210, 230, 0.71);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  width: 225px;
-  height: 55px;
-  padding: 15px 50px;
-  color: white;
+    border-radius: 30px;
+    background: rgba(117, 210, 230, 0.71);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 225px;
+    height: 55px;
+    padding: 15px 50px;
+    color: white;
 }
 
 #signUpBtn {
-  border-radius: 30px;
-  background: rgba(79, 197, 105, 0.42);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  width: 239px;
-  height: 55px;
-  padding: 15px 50px;
-  color: white;
+    border-radius: 30px;
+    background: rgba(79, 197, 105, 0.42);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 239px;
+    height: 55px;
+    padding: 15px 50px;
+    color: white;
 }
 
 #secondRowContainer {
-  display: flex;
-  margin-top: 230px;
-  padding-bottom: 230px;
+    display: flex;
+    margin-top: 230px;
+    padding-bottom: 230px;
 }
 
 #ourMissionContainer {
-  display: grid;
-  gap: 65px;
-  text-align: center;
-  align-items: center;
-  margin: 20px;
-  justify-content: center;
+    display: grid;
+    gap: 65px;
+    text-align: center;
+    align-items: center;
+    margin: 20px;
+    justify-content: center;
 }
 
 #missionHeading {
-  color: #000;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 60px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
 }
 
 #missionStatement {
-  color: var(--txt, #1a1a1a);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 21px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  width: 711px;
-  flex-shrink: 0;
+    color: var(--txt, #1a1a1a);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 711px;
+    flex-shrink: 0;
 }
 
 #learn-more-mission-btn-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #learnMoreMissionBtn {
-  border-radius: 30px;
-  background: rgba(117, 210, 230, 0.71);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  width: 225px;
-  height: 55px;
-  color: white;
+    border-radius: 30px;
+    background: rgba(117, 210, 230, 0.71);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 225px;
+    height: 55px;
+    color: white;
 }
 
 #thirdRowContainer {
-  margin-top: 100px;
-  padding-top: 50px;
-  display: flex;
-  gap: 100px;
-  margin: 20px;
-  padding: 20px;
+    margin-top: 100px;
+    padding-top: 50px;
+    display: flex;
+    gap: 100px;
+    margin: 20px;
+    padding: 20px;
 }
 
 #welcomeBackFormContainer {
-  background: rgba(35, 201, 222, 0.15);
-  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  width: 616px;
-  height: 800px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 70px;
-  padding-bottom: 30px;
+    background: rgba(35, 201, 222, 0.15);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 616px;
+    height: 800px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    padding-bottom: 30px;
 }
 
 #dontHaveAcctQuestion {
-  color: #000;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 14.5px;
-  padding-right: 375px;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 14.5px;
+    padding-right: 375px;
 }
 
 #alreadyHaveAcctQuestion {
-  color: #000;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 14.5px;
-  padding-right: 375px;
-  margin-bottom: 100px;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 14.5px;
+    padding-right: 375px;
+    margin-bottom: 100px;
 }
 
 #welcomeBackFormTitle,
 #getStartedFormTitle {
-  color: #000;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 33px;
-  font-style: normal;
-  font-weight: 600;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 600;
 }
 
 #welcomeBackForm {
-  display: flex;
-  gap: 100px;
+    display: flex;
+    gap: 100px;
 }
 
 #login-to-your-account {
-  color: #000;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 14.5px;
-  margin-top: 10px;
+    color: #000;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14.5px;
+    margin-top: 10px;
 }
 
 #remember-me {
-  margin-right: 125px;
-  margin-left: 5px;
+    margin-right: 125px;
+    margin-left: 5px;
 }
 
 #recoverBtn {
-  color: purple;
+    color: purple;
 }
 
 #welcomeBackPassword,
 #welcomeBackEmail {
-  border-radius: 10px;
-  border: 1px solid #d9d9d9;
-  background: #fff;
-  width: 400px;
-  height: 70px;
-  flex-shrink: 0;
-  background-color: #ffffff;
-  margin-bottom: 20px;
-  padding-left: 25px;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    background: #fff;
+    width: 400px;
+    height: 70px;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding-left: 25px;
 }
 
 #welcomeBackLoginButton,
 #createAccountButton {
-  margin-top: 55px;
+    margin-top: 55px;
 }
 
 #logInBtn,
 #createAccountBtn {
-  border-radius: 10px;
-  background: #20dc29;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  width: 400px;
-  height: 70px;
-  color: black;
-  margin-bottom: 30px;
+    border-radius: 10px;
+    background: #20dc29;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 400px;
+    height: 70px;
+    color: black;
+    margin-bottom: 30px;
 }
 
 #getStartedFormContainer {
-  background: rgba(35, 222, 43, 0.12);
-  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  width: 616px;
-  height: 800px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 70px;
+    background: rgba(35, 222, 43, 0.12);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 616px;
+    height: 800px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
 }
 
 #getStartedName,
 #signUpEmail,
 #getStartedPassword,
 #confirmPassword {
-  border-radius: 10px;
-  border: 1px solid #d9d9d9;
-  background: #fff;
-  width: 400px;
-  height: 70px;
-  flex-shrink: 0;
-  background-color: #ffffff;
-  margin-bottom: 20px;
-  padding-left: 25px;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    background: #fff;
+    width: 400px;
+    height: 70px;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding-left: 25px;
 }
 
 #footer {
@@ -284,13 +287,13 @@ body {
 
 #footerBtn,
 #footerTeamName {
-  color: #000;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
+    color: #000;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
 }
 
 /* Resources Page CSS Styling */
@@ -482,5 +485,3 @@ body {
     display: flex;
     align-items: center;
 }
-
-
