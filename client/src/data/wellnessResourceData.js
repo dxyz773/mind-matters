@@ -2,6 +2,7 @@ export const wellnessData = [
   {
     topic: "meditation",
     color: "#75D2E6",
+    img: "./meditation.png",
     resources: [
       {
         statement: "What is meditation?",
@@ -63,6 +64,7 @@ export const wellnessData = [
   {
     topic: "time-in-nature",
     color: "#B3ECC7",
+    img: "./timeInNature.png",
     resources: [
       {
         statement: "What is a “Green Space”?",
@@ -113,6 +115,7 @@ export const wellnessData = [
   {
     topic: "movement",
     color: "#FFBF1C",
+    img: "./movement.png",
     resources: [
       {
         statement: "What is movement?",
@@ -146,6 +149,7 @@ export const wellnessData = [
   {
     topic: "social-connection",
     color: "#AC7FF4",
+    img: "./socialConnection.png",
     resources: [
       {
         statement: "What is social connection?",
@@ -183,6 +187,7 @@ export const wellnessData = [
   {
     topic: "self-expression",
     color: "#F6CFAD",
+    img: "./socialConnection.png",
     resources: [
       {
         statement: "What is self expression?",
