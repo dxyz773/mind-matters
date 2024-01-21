@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository was created as part of the Women Who Code Hackathon For Social Code 2023. Mind Matters is an application designed to help individuals improve their well-being and mental health by providing a structured way to engage in self-care tasks. It offers a task tracking system to motivate users to perform these tasks regularly. In addition, the app provides a wealth of wellness resources and information on how to perform various self-care tasks effectively.
+This repository was created as part of the Women Who Code Hackathon For Social Good 2023. Mind Matters is an application designed to help individuals improve their well-being and mental health by providing a structured way to engage in self-care tasks. It offers a task tracking system to motivate users to perform these tasks regularly. In addition, the app provides a wealth of wellness resources and information on how to perform various self-care tasks effectively.
 
 ## Problem Statement
 
